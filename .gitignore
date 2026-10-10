@@ -1,0 +1,6 @@
+private/
+node_modules/
+.DS_Store
+*.log
+*.mp3
+!assets/placeholder-song.mp3

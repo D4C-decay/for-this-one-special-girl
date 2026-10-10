@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#ff2d55" />
+    <title>For This One Special Girl</title>
+    <meta name="description" content="Un detalle de amor hecho a mano." />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="heart-canvas" aria-hidden="true"></canvas>
+    <div id="floaters" aria-hidden="true"></div>
+
+    <main id="stage">
+      <section class="hero">
+        <p class="eyebrow" id="to-label">Para ti</p>
+        <h1 class="title" id="title">For This One Special Girl</h1>
+        <p class="typing" id="typing" aria-live="polite"></p>
+        <button type="button" class="cta" id="open-btn">Abrir nuestro detalle</button>
+      </section>
+
+      <section class="panel" id="counter-panel" hidden>
+        <h2>Juntos desde el 27 de octubre de 2024</h2>
+        <div class="counter" id="counter" aria-live="polite"></div>
+      </section>
+
+      <section class="panel" id="reasons-panel" hidden>
+        <h2>Razones por las que te amo</h2>
+        <ul class="reasons" id="reasons"></ul>
+      </section>
+
+      <section class="panel" id="letter-panel" hidden>
+        <h2>Una carta para ti</h2>
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Abrir carta">
+          <div class="envelope__body"></div>
+          <div class="envelope__flap"></div>
+          <span class="envelope__seal">❤</span>
+        </div>
+        <p class="letter" id="letter" hidden></p>
+      </section>
+
+      <section class="panel" id="secret-panel" hidden>
+        <h2>Hay algo escondido aquí…</h2>
+        <p class="hint" id="secret-hint">Mantén pulsado (o sacude el móvil) para descubrirlo</p>
+      </section>
+
+      <section class="panel" id="love-panel" hidden>
+        <h2>Una última pregunta…</h2>
+        <button type="button" class="love-btn" id="love-btn">¿Me amas?</button>
+      </section>
+    </main>
+
+    <div id="controls">
+      <button type="button" id="music-btn" class="icon-btn" aria-label="Reproducir música" hidden>
+        ♪
+      </button>
+      <button type="button" id="share-btn" class="icon-btn" aria-label="Compartir">↗</button>
+    </div>
+
+    <div id="secret-overlay" hidden>
+      <div class="secret-card">
+        <p class="secret-text" id="secret-text"></p>
+        <button type="button" class="cta" id="secret-close">Cerrar</button>
+      </div>
+    </div>
+
+    <audio id="bg-audio" loop preload="none"></audio>
+
+    <script src="./config.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
